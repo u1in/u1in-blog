@@ -30,7 +30,7 @@ npm install
 运行
 
 ```bash
-node start
+node server.js
 ```
 
 文章markdown请以 **时间@标题** 命名
