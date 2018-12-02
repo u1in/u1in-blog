@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="to-top" onclick="toTop()">
+        <i class="fa fa-angle-up"></i>
+    </div>
+
+    <div class="blog-box">
+        <div class="blog-name">
+            右灵
+        </div>
+        <div class="blog-subtitle">
+            若能换一瞥无心，只与你听的驼铃。
+        </div>
+        <div class="blog-link">
+            <a href="../index">文章</a>
+            <span class="link-seperate">/</span>
+            <a href="../about">关于</a>
+            <span class="link-seperate">/</span>
+            <a href="../link">友链</a>
+        </div>
+    </div>
+
+    <div class="index-page-box">
+        <div class="index-page">
+            <div class="index-title">文章列表</div>
+            <div class="index-container">
+                {% for article in articles %}
+                    <div class="index-item">
+                        <a href="../article/{{ article.name | urlencode }}">{{ article.time }}&nbsp;&nbsp;&nbsp;{{ article.title }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="index-pagination">
+            {% if currentPage > 1 %}
+                <a href="{{ currentPage - 1 }}">上一页</a>
+            {% endif %}
+            
+            {% for page in pagination %}
+                {% if page == currentPage %}
+                    <a href="{{ page }}" class="active">{{ page }}</a>
+                {% else %}
+                    <a href="{{ page }}">{{ page }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if currentPage < totalPage %}
+                <a href="{{ currentPage + 1 }}">下一页</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="footer">
+        Copyright © 2018 - 2020 u1in. All rights reserved.
+    </div>
+
+</body>
+
+</html>
