@@ -36,3 +36,5 @@ node start
 文章markdown请以 **时间@标题** 命名
 
 ## 截图
+
+![首页截图](./preview.png)
