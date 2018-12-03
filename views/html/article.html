@@ -8,7 +8,11 @@
     <link rel="shortcut icon" href="../images/favicon.ico">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/a11y-light.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
 </head>
 
 <body>
@@ -42,19 +46,17 @@
         Copyright © 2018 - 2020 u1in. All rights reserved.
     </div>
 
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
     <script type="text/javascript">
         window.onload = function() {
             window.onscroll =  function () {
-
                 let top
-
                 if (document.documentElement && document.documentElement.scrollTop) {
                     top = document.documentElement.scrollTop
                 }
                 else if (document.body) {
                     top = document.body.scrollTop
                 }
-
                 if(top > 300) {
                     document.getElementById('to-top').style.opacity = 1
                 }
@@ -63,7 +65,6 @@
                 }
             }
         }
-
         function toTop() {
             document.body.scrollIntoView({
                 behavior: "smooth",
