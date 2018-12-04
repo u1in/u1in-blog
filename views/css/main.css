@@ -31,6 +31,12 @@ a:active {
     opacity: 0;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
+    overflow: hidden;
+}
+
+#to-top > img {
+    height: 40%;
+    width: 40%;
 }
 
 .blog-name {
