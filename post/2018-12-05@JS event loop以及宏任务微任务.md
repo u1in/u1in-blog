@@ -79,7 +79,7 @@ console.log('script end');
 
 ***（有机会更新async异步函数存在的情况下的执行过程）***
 
-<hr>
+<hr />
 
 [JavaScript 运行机制详解：再谈Event Loop - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)
 
