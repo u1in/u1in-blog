@@ -67,10 +67,10 @@ console.log('script end');
 ```js
 //script start 宏任务
 //script end 宏任务
-//promise1 微任务 异步执行
-//promise3 微任务 异步执行
-//promise2 微任务 任务队列头部
-//promise4 微任务 任务队列尾部
+//promise1 微任务 任务队列 1任务
+//promise3 微任务 任务队列 2任务
+//promise2 微任务 任务队列 3任务
+//promise4 微任务 任务队列 4任务
 //渲染逻辑
 //setTimeout 下一个宏任务
 ```
